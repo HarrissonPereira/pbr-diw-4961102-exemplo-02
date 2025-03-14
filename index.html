@@ -10,44 +10,210 @@
         * {
             font-size: 16px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
         }
 
-        .container{
-            border: 1px solid red;
+        .container {
+            border: 1px solid #bdbbbb;
             box-shadow: .5rem .5rem .3rem .01rem #bdbbbb;
             padding: 1rem;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            height: 30rem;
+            align-content: start;
         }
 
-        .item{
+        .item {
             background-color: blue;
+            /* box-shadow: .5rem .5rem .3rem .01rem #bdbbbb; */
             color: white;
             font-weight: bold;
-            margin: 1rem;
+            margin: 0;
             padding: 1rem;
             width: 5rem;
-            height: 5rem;
+            height: 3rem;
+        }
+
+        .logo {
+            flex-grow: 1;
+        }
+
+        .titulo-do-site {
+            flex-grow: 12;
+        }
+
+        .menu-sanduiche {
+            flex-grow: 1;
+        }
+
+        .cabecalho {
+            display: flex;
+        }
+
+        .painel {
+            display: flex;
+            height: 30rem;
+        }
+
+        .menu-lateral {
+            flex-grow: 3;
+            min-width: 10rem;
+        }
+
+        .parte-principal {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid red;
+            flex-grow: 11;
+            gap: 24px;
+            padding: 32px;
+        }
+
+        .tile {
+            background-color: #dedede;
+            flex-grow: 1;
+            height: 3rem;
+            margin-bottom: .5rem;
+        }
+
+        .tile:hover {
+            background-color: #11b446;
+            color: white;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .item-card{
+            width: calc(100% / 4);
+            max-height: 100px;
+            display: flex;
+            padding: 16px;
+            background-color: #f5eec4;
+            border-radius: 8px;
+
+            img{
+                width: 7rem;
+            }
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .description{
+                    font-weight: 400;
+                }
+
+                .value{
+                    align-self: flex-end;
+                    font-weight: bold;
+                }
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="item">Item 01</div>
-        <div class="item">Item 02</div>
-        <div class="item">Item 03</div>
-        <div class="item">Item 04</div>
-        <div class="item">Item 05</div>
-        <div class="item">Item 06</div>
-        <div class="item">Item 07</div>
-        <div class="item">Item 08</div>
-        <div class="item">Item 09</div>
-        <div class="item">Item 10</div>
-        <div class="item">Item 11</div>
-        <div class="item">Item 12</div>
-    </div>
+    <header class="cabecalho">
+        <div class="item logo">Logo</div>
+        <div class="item titulo-do-site">Título do site</div>
+        <div class="item menu-sanduiche">Menu</div>
+    </header>
+
+    <section class="painel">
+        <nav class="menu-lateral">
+            <a href="https://www.google.com" target="_blank">
+                <div class="tile">Opção 1</div>
+            </a>
+            <a href="https://www.pucminas.br" target="_blank">
+                <div class="tile">Opção 2</div>
+            </a>
+            <a href="https://www.primevideo.com" target="_blank">
+                <div class="tile">Opção 3</div>
+            </a>
+            <a href="https://www.mcdonalds.com.br" target="_blank">
+                <div class="tile">Opção 4</div>
+            </a>
+        </nav>
+        <main class="parte-principal">
+            <div class="item-card">
+                <div>
+                    <img src="https://cache-mcd-middleware.mcdonaldscupones.com/media/image/product$kzXCTbnv/200/200/original?country=br" alt="sanduíche">
+                </div>
+                <div class="content">
+                    <p class="description">Hamburguer nº1 do McDonald's. Possui muito queijo e muito sabor.</p>
+                    <p class="value">R$45,00</p>
+                </div>
+            </div>
+            <div class="item-card">
+                <div>
+                    <img src="https://cache-mcd-middleware.mcdonaldscupones.com/media/image/product$kzXNUCF7/200/200/original?country=br" alt="">
+                </div>                
+                <div class="content">
+                    <p class="description">Hamburguer custo benefício do McDonald's. Sabor e economia no mesmo produto.</p>
+                    <p class="value">R$25,00</p>
+                </div>
+            </div>
+            <div class="item-card">
+                <div>
+                    <img src="https://cache-mcd-middleware.mcdonaldscupones.com/media/image/product$kzXv7hw4/200/200/original?country=br" alt="">
+                </div>
+                <div class="content">
+                    <p class="description">Hamburguer do McDonald's para quem realmente gosta de carne</p>
+                    <p class="value">R$32,00</p>
+                </div>
+            </div>
+            <div class="item-card">
+                <div>
+                    <img src="https://cache-mcd-middleware.mcdonaldscupones.com/media/image/product$kfXZyCdc/200/200/original?country=br" alt="">
+                </div>
+                <div class="content">
+                    <p class="description">Hamburguer Tasty McDonald's. Da família Tasty, para quem tem muita fome</p>
+                    <p class="value">R$52,00</p>
+                </div>
+            </div>
+            <div class="item-card">
+                <div>
+                    <img src="https://cache-mcd-middleware.mcdonaldscupones.com/media/image/product$k6XkEN44/200/200/original?country=br" alt="">
+                </div>
+                <div class="content">
+                    <p class="description">Hamburguer queridinho do McDonald's. Para os fanáticos de de cheddar cremoso.</p>
+                    <p class="value">R$41,00</p>
+                </div>
+            </div>
+            <div class="item-card">
+                <div>
+                    <img src="https://cache-mcd-middleware.mcdonaldscupones.com/media/image/product$kfXzVxbm/200/200/original?country=br" alt="">
+                </div>
+                <div class="content">
+                    <p class="description">Hamburguer Crispy do McDonald's. Crocância e sabor do chicken em um único lugar.</p>
+                    <p class="value">R$35,00</p>
+                </div>
+            </div>
+            <div class="item-card">
+                <div>
+                    <img src="https://cache-mcd-middleware.mcdonaldscupones.com/media/image/product$kPXfBnhs/200/200/original?country=br" alt="">
+                </div>
+                <div class="content">
+                    <p class="description">Hamburguer Egg do McDonald's. Uma opção diferente para quem quer um sabor pela manhã</p>
+                    <p class="value">R$27,00</p>
+                </div>
+            </div>
+            <div class="item-card">
+                <div>
+                    <img src="https://cache-mcd-middleware.mcdonaldscupones.com/media/image/product$k6XkEN44/200/200/original?country=br" alt="">
+                </div>
+                <div class="content">
+                    <p class="description">Hamburguer Onion Rings do McDonald's. A combinação perfeita de onion rings e hamburguer</p>
+                    <p class="value">R$36,00</p>
+                </div>
+            </div>
+        </main>
+    </section>
 </body>
 
 </html>
